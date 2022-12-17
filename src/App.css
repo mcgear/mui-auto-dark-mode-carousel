@@ -3,7 +3,12 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 5vmin;
+  pointer-events: none;
+}
+
+.Fathym-logo {
+  height: 5vmin;
   pointer-events: none;
 }
 
