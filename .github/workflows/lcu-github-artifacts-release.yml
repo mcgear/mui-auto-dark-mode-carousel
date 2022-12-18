@@ -1,4 +1,4 @@
-name: GuerrillaGorilla/mui-auto-dark-mode-carousel
+name: mcgear/public-web-react
 
 on:
   push:
@@ -13,9 +13,9 @@ env:
   Branches: main
   MainBranch: main
   NPMRegistry: https://registry.npmjs.org/
-  InstallCommand: npm i
+  InstallCommand: npm ci
   BuildCommand: npm run build
-  Output: ./
+  Output: ./build
 
 jobs:
   build:
@@ -54,7 +54,7 @@ jobs:
         id: package_json_exists
         uses: fathym/file-existence-action@master
         with:
-          files: 'package.json'
+          files: "package.json"
 
       # replace text in package.json for main branch
       - name: replace version text for main branch
@@ -108,7 +108,7 @@ jobs:
           RELEASE_BRANCHES: .*
           WITH_V: false
       - run: echo "New version is ${{ steps.versionBump.outputs.new_tag }}"
-
+      
       # webhook to LowCodeUnit
       - name: Invoke deployment hook
         uses: fathym/workflow-webhook@v2
