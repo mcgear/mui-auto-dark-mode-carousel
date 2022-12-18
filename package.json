@@ -1,7 +1,8 @@
 {
   "name": "mui-auto-dark-mode-test",
   "version": "0.0.0",
-  "private": true,
+  "private": false,
+  "homepage": ".",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
